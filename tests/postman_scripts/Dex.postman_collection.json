@@ -1,0 +1,162 @@
+{
+	"info": {
+		"_postman_id": "3d6e3d8b-0e0d-49e2-835d-2ed785fa20ab",
+		"name": "Dex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8814665"
+	},
+	"item": [
+		{
+			"name": "GetTokens",
+			"request": {
+				"auth": {
+					"type": "oauth2",
+					"oauth2": [
+						{
+							"key": "accessTokenUrl",
+							"value": "http://127.0.0.1:5556/dex/token",
+							"type": "string"
+						},
+						{
+							"key": "clientSecret",
+							"value": "ZXhhbXBsZS1hcHAtc2VjcmV0",
+							"type": "string"
+						},
+						{
+							"key": "state",
+							"value": "I wish to wash my irish wristwatch",
+							"type": "string"
+						},
+						{
+							"key": "scope",
+							"value": "openid profile email offline_access",
+							"type": "string"
+						},
+						{
+							"key": "clientId",
+							"value": "example-app",
+							"type": "string"
+						},
+						{
+							"key": "authUrl",
+							"value": "http://127.0.0.1:5556/dex/auth",
+							"type": "string"
+						},
+						{
+							"key": "useBrowser",
+							"value": true,
+							"type": "boolean"
+						},
+						{
+							"key": "tokenName",
+							"value": "token",
+							"type": "string"
+						},
+						{
+							"key": "addTokenTo",
+							"value": "header",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetUserInfo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{access_token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5556/dex/userinfo",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5556",
+					"path": [
+						"dex",
+						"userinfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAccessTokenWithRefreshToken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\", jsonData.access_token);",
+							"postman.setEnvironmentVariable(\"refresh_token\", jsonData.refresh_token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "client_id",
+							"value": "example-app",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "refresh_token",
+							"type": "text"
+						},
+						{
+							"key": "refresh_token",
+							"value": "ChlhaG15eWMyYjZkaW5maGxxNGNpdmIzN3B5EhlsaXFtdnNqbXhiajZtYWJwbmlkcW95M2Fs",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "ZXhhbXBsZS1hcHAtc2VjcmV0",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5556/dex/token",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5556",
+					"path": [
+						"dex",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
