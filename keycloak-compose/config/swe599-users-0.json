@@ -1,0 +1,41 @@
+{
+  "realm" : "swe599",
+  "users" : [ {
+    "id" : "74b2ac8a-3665-433e-8a34-feeb06e2124d",
+    "createdTimestamp" : 1671993937665,
+    "username" : "aydos",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "aydos",
+    "lastName" : "ilgazi",
+    "email" : "aydosilgazi@gmail.com",
+    "credentials" : [ {
+      "id" : "ca0a1701-a333-49fd-a6bc-4237f3c4e60c",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1671993945357,
+      "secretData" : "{\"value\":\"q75P2W9M6o0AUh+xL1j9AjxIWS4V+NG6IYXSOsmjkVd563o7M3JPlw+L4ZAGPwOTsBV/s50TkUhDfcGYh3x95g==\",\"salt\":\"eMkzsYskqo5A0CLGH7yhxA==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-swe590" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
+    "id" : "44cd13b7-106d-4eaa-986c-9c97ff983b26",
+    "createdTimestamp" : 1671993694207,
+    "username" : "service-account-677e6be9-b461-4b2b-b29f-859d07916241",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "serviceAccountClientId" : "677e6be9-b461-4b2b-b29f-859d07916241",
+    "credentials" : [ ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-swe590" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  } ]
+}
