@@ -35,3 +35,9 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# dependencies
+/keycloakapp1/node_modules
+/keycloakapp2/node_modules
+/.pnp
+.pnp.js
