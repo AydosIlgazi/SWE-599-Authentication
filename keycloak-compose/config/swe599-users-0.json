@@ -5,7 +5,7 @@
     "createdTimestamp" : 1671993937665,
     "username" : "aydos",
     "enabled" : true,
-    "totp" : false,
+    "totp" : true,
     "emailVerified" : false,
     "firstName" : "aydos",
     "lastName" : "ilgazi",
@@ -13,10 +13,16 @@
     "credentials" : [ {
       "id" : "ca0a1701-a333-49fd-a6bc-4237f3c4e60c",
       "type" : "password",
-      "userLabel" : "My password",
-      "createdDate" : 1671993945357,
-      "secretData" : "{\"value\":\"q75P2W9M6o0AUh+xL1j9AjxIWS4V+NG6IYXSOsmjkVd563o7M3JPlw+L4ZAGPwOTsBV/s50TkUhDfcGYh3x95g==\",\"salt\":\"eMkzsYskqo5A0CLGH7yhxA==\",\"additionalParameters\":{}}",
+      "createdDate" : 1671998708159,
+      "secretData" : "{\"value\":\"KRTAgOdx07IIQk83Xvw87ywm3/IffWUe19HX6NWVWc17NAp4J4DmfVtNp9sEhz4GDQtflct60RUQglTtJ7vw4Q==\",\"salt\":\"MkHvz+L4uGwAFdyt3SE/2w==\",\"additionalParameters\":{}}",
       "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    }, {
+      "id" : "3d1f0439-90ae-4b54-8e46-1803cdeab24e",
+      "type" : "otp",
+      "userLabel" : "aydosdevice",
+      "createdDate" : 1671999315587,
+      "secretData" : "{\"value\":\"hLxbOiewzwhSzCIK44VD\"}",
+      "credentialData" : "{\"subType\":\"totp\",\"digits\":6,\"counter\":0,\"period\":30,\"algorithm\":\"HmacSHA1\"}"
     } ],
     "disableableCredentialTypes" : [ ],
     "requiredActions" : [ ],
